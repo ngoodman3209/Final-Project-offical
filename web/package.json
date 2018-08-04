@@ -116,8 +116,5 @@
       "jsx",
       "node"
     ]
-  },
-  "devDependencies": {
-    "pure-react-carousel": "^1.13.2"
   }
 }

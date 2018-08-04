@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
 
 import users from '../process/users/reducer'
+import animals from '../ui/pages/homepage/dummy_reducer'
 import TYPES from './types'
 
 const appReducer = combineReducers({
-  users
+  users,
+  animals
 })
 
 export default (state, action) => {

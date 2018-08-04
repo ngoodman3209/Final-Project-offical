@@ -1,7 +1,7 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 
-import * as actions from './actions'
+import * as userAuthActions from './actions'
 import connected from '../../../state/connect'
 import { selector as users } from '../reducer'
 import JWTVerify from './verify-jwt-token'
@@ -13,11 +13,11 @@ const autoLoginProcess = WrappedComponent => {
       if (active)
         return <Redirect to={{ pathname: '/landing', state: { from: this.props.location } }} />
 
-      return <WrappedComponent {...this.props} />
+      return <WrappedComponent />
     }
   }
 
-  return connected([users], [actions])(JWTVerify(AutoLogin))
+  return connected([users], [userAuthActions])(JWTVerify(AutoLogin))
 }
 
 export default autoLoginProcess
