@@ -13,10 +13,9 @@ export function fetchAnimals(amount) {
 }
 
 export function* executeFetchAnimals({ amount }) {
-  const url = api.fetch.formatUrl()
-  const body = api.fetch.serialize(amount)
+  const url = api.fetch.formatUrl(amount)
   try {
-    const res = yield call(api.fetch.request, url, body)
+    const res = yield call(api.fetch.request, url)
     yield put(fetchSuccess(res.data.animals))
   } catch (res) {
     // eslint-disable-next-line noconsole
