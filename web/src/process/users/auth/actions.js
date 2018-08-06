@@ -9,10 +9,11 @@ import LocalStorage from '../../../utilities/local-storage/token'
 export const name = 'userAuthActions'
 
 export function fetch(email, password) {
+  console.log("HERE I AM")
   return {
     type: TYPES.FETCH_USER_TOKEN_REQUEST,
     email,
-    password
+    password,
   }
 }
 

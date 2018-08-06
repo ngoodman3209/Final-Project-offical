@@ -10,7 +10,7 @@
     "babel",
     "jest"
   ],
-  "parser": "babel",
+  "parser": "babel-eslint",
   "rules": {
     "array-bracket-spacing": ["error", "never"],
     "curly": "off",
