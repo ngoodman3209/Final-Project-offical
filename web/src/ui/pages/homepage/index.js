@@ -15,7 +15,7 @@ class Homepage extends Component {
     return (
       <div>
         <Link to="/login">Login Page</Link>
-        Homepage here!!!!!
+        Homepage yeah!!!!!
       </div>
     )
   }
